@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://maven.gremlin.com/'
+    }
+}
+
+dependencies {
+    implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
+    implementation 'com.amazonaws:aws-lambda-java-events:3.6.0'
+    implementation group: 'com.gremlin', name: 'alfi-core', version: '0.+'
+    implementation group: 'com.gremlin', name: 'alfi-aws', version: '0.+'
+    testImplementation 'junit:junit:4.13.1'
+}
